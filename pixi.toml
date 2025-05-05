@@ -1,0 +1,21 @@
+[workspace]
+authors = ["smpdmohanty <smpdmohanty@gmail.com>"]
+channels = ["conda-forge"]
+name = "RL"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+numpy = ">=2.2.5,<3"
+scipy = ">=1.15.2,<2"
+tqdm = ">=4.67.1,<5"
+python = ">=3.12.10,<3.13"
+swig = ">=4.3.1,<5"
+fire = ">=0.7.0,<0.8"
+pygmo = ">=2.19.7,<3"
+
+[pypi-dependencies]
+gymnasium = { version = ">=1.1.1, <2", extras = ["box2d"] }
+
