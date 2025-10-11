@@ -14,7 +14,7 @@ def simulate(env, policy, gamma):
     while not episode_over:
         # action = env.action_space.sample()  # agent policy that uses the observation and info
 
-        action = policy.act(observation)
+        action = policy.act(observation) 
 
         observation, reward, terminated, truncated, info = env.step(action)
         episode_over = terminated or truncated
@@ -42,7 +42,7 @@ class MyProblem:
     def fitness(self, x):
         policy = LinearPolicy(self.env)
         policy.weights = x.reshape(*self.shape)
-        print('ok')
+        #print('ok')
         return [-simulate(self.env, policy, self.gamma)]
         
 
